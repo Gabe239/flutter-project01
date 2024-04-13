@@ -15,7 +15,8 @@ class _TabbarState extends State<Tabbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        
+        backgroundColor:
+            Colors.grey[900], // Set bottom navigation bar background color
         selectedItemColor: Colors.white, // Set selected item color
         unselectedItemColor: Colors.grey, // Set unselected item color
         currentIndex: _selectedTab,
@@ -26,15 +27,30 @@ class _TabbarState extends State<Tabbar> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Image.asset(
+              'assets/images/icons/home.png',
+              width: 24, // Set width of the image
+              height: 24, // Set height of the image
+              color: _selectedTab == 0 ? Colors.white : Colors.grey,
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined),
+            icon: Image.asset(
+              'assets/images/icons/search.png',
+              width: 24,
+              height: 24,
+              color: _selectedTab == 0 ? Colors.white : Colors.grey,
+            ),
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_music),
+            icon: Image.asset(
+              'assets/images/icons/library.png',
+              width: 24,
+              height: 24,
+              color: _selectedTab == 0 ? Colors.white : Colors.grey,
+            ),
             label: "Your Library",
           ),
         ],
