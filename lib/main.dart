@@ -18,6 +18,9 @@ class App extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.routes,
       onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black, // Set scaffold background color here
+      ),
     );
   }
 }

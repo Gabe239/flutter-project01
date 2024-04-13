@@ -15,6 +15,9 @@ class _TabbarState extends State<Tabbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        
+        selectedItemColor: Colors.white, // Set selected item color
+        unselectedItemColor: Colors.grey, // Set unselected item color
         currentIndex: _selectedTab,
         onTap: (index) {
           setState(() {
@@ -49,13 +52,16 @@ class _TabbarState extends State<Tabbar> {
   Widget _buildTabScreen(int tabIndex, String routeName) {
     return Offstage(
       offstage: _selectedTab != tabIndex,
-      child: Navigator(
-        key: GlobalKey(),
-        onGenerateRoute: (settings) {
-          return MaterialPageRoute(
-            builder: (context) => AppRoutes.routes[routeName]!(context),
-          );
-        },
+      child: Container(
+        color: Colors.black, // Set main screen background color to black
+        child: Navigator(
+          key: GlobalKey(),
+          onGenerateRoute: (settings) {
+            return MaterialPageRoute(
+              builder: (context) => AppRoutes.routes[routeName]!(context),
+            );
+          },
+        ),
       ),
     );
   }
