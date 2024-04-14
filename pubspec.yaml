@@ -67,6 +67,7 @@ flutter:
     - assets/images/icons/
     - assets/images/albums/
     - assets/images/artists/
+    - assets/images/profile/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

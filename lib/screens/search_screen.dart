@@ -23,7 +23,7 @@ class Search extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 20,
-                        backgroundImage: AssetImage("assets/images/artists/artist1.jpg"),
+                        backgroundImage: AssetImage("assets/images/profile/profile.png"),
                       ),
                       SizedBox(width: 10),
                       Text(

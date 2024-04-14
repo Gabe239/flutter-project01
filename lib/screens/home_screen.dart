@@ -3,6 +3,7 @@ import 'package:test2/components/HomeScreen/recent.dart';
 import 'package:test2/components/HomeScreen/suggested.dart';
 import 'package:test2/components/HomeScreen/artists.dart';
 import 'package:test2/components/HomeScreen/release.dart';
+import 'package:test2/components/cattegoryButton.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,19 +16,24 @@ class HomeScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.transparent, elevation: 0,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             pinned: true,
-            expandedHeight: 100, // Adjust as needed
+            expandedHeight: 100,
             flexibleSpace: Padding(
               padding: const EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 10.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
                     radius: 20,
                     backgroundImage:
-                        AssetImage("assets/images/artists/artist1.jpg"),
+                        AssetImage("assets/images/profile/profile.png"),
                   ),
+                  SizedBox(width: 10),
+                  buildCategoryButton('Music', Color.fromARGB(255, 29, 29, 29)),
+                  SizedBox(width: 10),
+                  buildCategoryButton(
+                      'Podcasts', Color.fromARGB(255, 29, 29, 29)),
                 ],
               ),
             ),
