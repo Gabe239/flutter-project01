@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test2/components/recent.dart';
-import 'package:test2/components/suggested.dart';
-import 'package:test2/components/artists.dart';
-import 'package:test2/components/release.dart';
+import 'package:test2/components/HomeScreen/recent.dart';
+import 'package:test2/components/HomeScreen/suggested.dart';
+import 'package:test2/components/HomeScreen/artists.dart';
+import 'package:test2/components/HomeScreen/release.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
